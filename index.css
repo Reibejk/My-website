@@ -1,0 +1,147 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+.container {
+	display: flex;
+	overflow: hidden;
+}
+
+.sidebar {
+	width: 20vw;
+	border-right: 0.5px solid;
+	height: 100vh;
+	overflow: none;
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	width: 80vw;
+	overflow-x: none;
+	overflow-y: scroll;
+	height: 100vh;
+}
+
+#brand-logo {
+	width: 10vw;
+	padding: 5px;
+	margin: 10px 5px 30px 5px;
+	font-size: 22px;
+	font-weight: 400;
+	font-family: fantasy, Arial;
+	display: flex;
+	justify-content: center;
+}
+
+
+.sidebar-item {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	font-size: 15px;
+	margin-bottom: 15px;
+}
+
+.sidebar-item > p {
+	padding: 5px;
+	margin-top: 5px;
+	margin-right: 20px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.bottom-bar, .top-bar {
+	display: none;
+}
+
+.fa-solid {
+	font-size: 25px;
+	padding: 5px;
+	margin-left: 20px;
+}
+
+.navbar {
+	font-weight: bold;
+	background: linear-gradient(to bottom, lightgray, white);
+}
+
+
+h1 {
+	text-align: center;
+}
+
+.stories {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.story {
+	border-bottom: 1px solid black;
+	width: 70%;
+	margin-top: 30px;
+}
+
+h5 {
+	display: inline;
+}
+
+.story > i {
+	display: flex;
+	align-items: flex-start;
+}
+
+.story span:nth-child(1) {
+	display: flex;
+	justify-content: space-between;
+}
+
+.story span:nth-child(3) {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 20px;
+	padding: 5px;
+}
+
+@media screen and (max-width: 800px) {
+	.sidebar {
+		display: none;
+	}
+
+	.main {
+		width: 100vw;
+	}
+
+	.bottom-bar {
+		display: flex;
+		justify-content: space-evenly;
+		padding: 10px;
+		position: fixed;
+		bottom: 0px;
+		background: linear-gradient(to left, white, whitesmoke, white);
+		width: 67%;
+		z-index: 1;
+	}
+
+	.top-bar {
+		position: fixed;
+		top: 0px;
+		width: 80%;
+		font-size: 22px;
+		font-weight: 400;
+		font-family: fantasy, Arial;
+		display: flex;
+		justify-content: center;
+		background: radial-gradient(whitesmoke 60%, transparent 20%);
+	}
+
+	.navbar {
+		margin-top: 70px;
+	}
+}
